@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiremi - Super Admin Login</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="Loginstyle.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row vh-100">
+        <div
+          class="col-lg-6 d-flex flex-column justify-content-center left-panel"
+        >
+          <h1 class="display-5 fw-bold mb-5 custom-heading">Hiremi</h1>
+          <h2 class="h1 fw-bold mb-3 super-admin-heading">Super Admin Login</h2>
+          <p class="lead mb-5 hiremi-description">
+            By logging in, you gain access to the entire hiremi Application,<br />allowing
+            you to view and make necessary changes
+          </p>
+          <a
+            href="#"
+            class="learn-more-link text-decoration-none fw-normal custom-learn-more mb-5"
+          >
+            Learn More <i class="bi bi-chevron-right"></i>
+          </a>
+          <div class="dots-indicator">
+            <div class="dot active"></div>
+            <div class="dot inactive"></div>
+            <div class="dot inactive"></div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-6 d-flex align-items-center justify-content-center p-4 p-lg-5 position-relative"
+        >
+          <div class="w-100" style="max-width: 28rem">
+            <div class="mb-4">
+              <h1 class="h2 fw-bold mb-2 right-hiremi">Hiremi</h1>
+              <h2 class="h4 text-muted right-super-admin">Super Admin Login</h2>
+            </div>
+            <div class="container mt-5 form-container">
+              <form id="loginForm">
+                <div class="mb-4">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="johndoe@email.com"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="password-field">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="**************"
+                      required
+                    />
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-1"
+                    style="position: relative; height: 30px"
+                  >
+                    <small
+                      id="formMessage"
+                      class="error-text"
+                      style="display: none"
+                      >Invalid Email or Password</small
+                    >
+                    <a
+                      href="#"
+                      class="forgot-password"
+                      style="position: absolute; left: 230px"
+                      >Forget Password?</a
+                    >
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary rounded-pill submit-btn">
+                 <a style="color: white; text-decoration: none;" href="/Resource/OTP/index.html"> SIGN IN</a>
+                </button>
+
+              </form>
+            </div>
+          </div>
+          <img src="assets/icon.png" class="icon" alt="Icon" />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          validateForm();
+        });
+
+      function validateForm() {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const emailField = document.getElementById("email");
+        const passwordField = document.getElementById("password");
+        const formMessage = document.getElementById("formMessage");
+
+        let isValid = true;
+
+        emailField.classList.remove("input-error");
+        passwordField.classList.remove("input-error");
+        emailField.style.borderColor = "";
+        passwordField.style.borderColor = "";
+        formMessage.textContent = "";
+        formMessage.style.display = "none";
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          emailField.classList.add("input-error");
+          emailField.style.borderColor = "red";
+          passwordField.style.borderColor = "red";
+          isValid = false;
+        }
+
+        if (password.length < 6) {
+          passwordField.classList.add("input-error");
+          passwordField.style.borderColor = "red";
+          emailField.style.borderColor = "red";
+          isValid = false;
+        }
+
+        if (!isValid) {
+          formMessage.textContent = "Invalid Email or Password";
+          formMessage.style.display = "block";
+          emailField.value = "";
+          passwordField.value = "";
+        } else {
+          formMessage.textContent = "";
+          formMessage.style.display = "none";
+
+          window.location.href = "OTP.html";
+        }
+      }
+
+      document.getElementById("email").addEventListener("input", function () {
+        const emailField = document.getElementById("email");
+        const formMessage = document.getElementById("formMessage");
+        emailField.classList.remove("input-error");
+        emailField.style.borderColor = "";
+        formMessage.style.display = "none";
+      });
+
+      document
+        .getElementById("password")
+        .addEventListener("input", function () {
+          const passwordField = document.getElementById("password");
+          const formMessage = document.getElementById("formMessage");
+          passwordField.classList.remove("input-error");
+          passwordField.style.borderColor = "";
+          formMessage.style.display = "none";
+        });
+    </script>
+  </body>
+</html>

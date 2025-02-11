@@ -1,0 +1,365 @@
+*{
+   padding: 0%;
+   margin: 0%;
+   box-sizing: border-box;
+}
+html,
+body{
+ width: 100%;
+ height: 100%;
+ font-family: poppins;
+}
+    /* nav */
+.nav {
+width: 100%;
+height: 9vh;
+background-color: #fff;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+}
+.logo img {
+height: 30px;
+margin-left: 35%;
+}
+.search-bar input {
+border-radius: 5px;
+border: 1px solid rgba(0, 0, 0, 0.629);
+text-transform: capitalize;
+font-family: poppins;
+color: #A0AEC0;
+padding: 8px 30px;
+margin-left: 150%;
+}
+.nav .nav-icons{
+display: flex;
+gap: 20px;
+margin-left: 50%;
+}
+.nav #user{
+width: 100px;
+height: 30px;
+background-color: rgba(41, 40, 40, 0.385);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.nav #notification{
+margin-top: 3%;
+font-size: 20px;
+margin-left: 50%;
+}
+
+    /* Sidebar Menu */
+.sidebar {
+   width: 250px;
+   background-color: #0039d7;
+   color: white;
+   height: 100vh;
+   padding: 20px;
+   position: fixed;
+   left: -250px;
+   transition: left 0.3s ease-in-out;
+   top: 9vh;
+   overflow: auto;
+}
+.sidebar.open {
+    left: 0;
+}
+    /* Toggle Button */
+.menu-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    background-color: transparent;
+    /* background-color: green; */
+    color: white;
+    border: none;
+    z-index: 1000;
+    margin-top: 5.6%;
+    margin-left: 10px;
+    position: fixed;
+}
+.menu-logo{
+    position: relative;
+    top: 5%;
+}
+.xyz{
+    height: 100%;
+    background-color: #003dd1;
+    position: fixed;
+    width: 45px;
+    top: 10%;
+  }
+
+.menu-logo img{
+  height: 20px;
+  margin-top: 45%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+    /* Menu Items */
+    .menu-item {
+        padding: 5px;
+        background: white;
+        color: #0039d7;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        /* margin-top: 3%; */
+        margin-top: 20px;
+    }
+    .menu-list {
+        list-style: none;
+        padding: 0;
+    }
+    .menu-list li {
+        padding: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 13px;
+    }
+    .menu-list li i {
+        margin-right: 10px;
+    }
+    /* Submenu */
+    .submenu {
+        display: none;
+        padding-left: 20px;
+    }
+    .user-status:hover .submenu {
+        display: block;
+    }
+.content {
+     margin-left: 0;
+     transition: margin-left 0.3s ease-in-out;
+}
+    .content.shift {
+        margin-left: 250px;
+    }
+    /* main content */
+.container {
+max-width: 1400px;
+margin: 0 auto;
+background: white;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#all-states{
+text-transform: capitalize;
+font-size: 17px;
+color: rgba(0, 0, 0, 0.8);
+margin-top: 5%;
+position: relative;
+}
+h1 {
+font-size: 25px;
+color: rgba(0, 0, 0, 0.795);
+margin-top: 4%;
+}
+.tabs, .filters {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+font-family: poppins;
+margin-top: 2%;
+}
+.tabs button {
+padding: 10px 25px;
+border: 1px solid #ddd;
+border-radius: 5px;
+background-color: #fff;
+cursor: pointer;
+font-size: 14px;
+}
+.filters button {
+padding: 10px 20px;
+border: 1px solid #ddd;
+border-radius: 5px;
+background-color: #fff;
+cursor: pointer;
+width: 20px;
+font-size: 14px;
+}
+.tabs .active {
+border: 1px solid #ddd;
+border-radius: 30px 0px 0px 30px;
+width: 12%;
+height: 42px;
+}
+.tabs button.all-state {
+background-color: #003dd1;
+color: #fff;
+width: 12%;
+height: 42px;
+margin-left: -2%;
+border-radius: 0px 30px 30px 0px;
+}
+.tabs .download-app {
+border-radius: 50px;
+border: 1px solid #003dd1;
+color: #003dd1;
+/* margin-left: %; */
+width: 13.5%;
+height: 42px;
+}
+.filters .Default{
+border-radius: 50px;
+width: 11%;
+height: 45px;
+align-items: center;
+}
+.filters .Defaultt{
+border-radius: 50px;
+width: 13%;
+height: 45px;
+align-items: center;
+}
+.filters .no-change{
+background-color: #003dd1;
+color: #fff;
+border-radius: 30px 0px 0px 30px;
+width: 8%;
+height: 45px;
+border-radius: 50px;
+}
+.filters .App-download{
+border-radius: 50px;
+margin-left: 0.8%;
+width: 14%;
+height: 45px;
+}
+/* Table Container */
+.table-container {
+width: 100%;
+background: white;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+font-size: 22px;
+color: #333;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+thead {
+background-color: #e6f0ff;
+}
+
+th, td {
+padding: 12px;
+border: 1px solid #ddd; /* Horizontal and vertical lines added */
+}
+
+th {
+text-align: left;
+font-weight: bold;
+color: #0056b3;
+}
+
+/* Adding lines between table rows */
+tr {
+border-bottom: 1px solid #ddd;
+}
+
+tr:last-child {
+border-bottom: none; /* Remove border for last row */
+}
+
+/* View Button */
+.view-btn {
+padding: 4px 35px;
+border: 1px solid #0057b3c1;
+background: none;
+color: #0056b3;
+cursor: pointer;
+border-radius: 20px;
+font-size: 14px;
+}
+
+.view-btn:hover {
+background: #0056b3;
+color: white;
+}
+.progress-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25%;
+    margin-left: 73%;
+    margin-top: -10%;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.progress-bar #Account-create-detail{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.856);
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    left: -60%;
+    top: 20%;
+}
+
+.progress-bar div {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar div span.progress {
+    display: block;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+
+#blue-progress {
+    background-color: #007bff; /* Blue */
+    width: 90%;
+    border-radius: 50px;
+}
+
+#green-progress {
+    background-color: #28a745; /* Green */
+    border-radius: 50px;
+    width: 70%;
+}
+
+#red-progress {
+    background-color: #dc3545; /* Red */
+    border-radius: 50px;
+    width: 50%;
+}

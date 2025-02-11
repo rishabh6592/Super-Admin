@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="/Images/Hiremi logo.png" alt="">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="nav-icons">
+            <i id="notification" class="ri-notification-3-line"></i>
+            <i id="user" class="ri-user-3-line"></i>
+        </div>
+        <div class="nav-content">
+            <h6 style="color: blue; letter-spacing: 0.5px; margin-left: -22%;">Super Admin</h6>
+            <p style="font-size: 15px; margin-left: -22%;">Username</p>
+        </div>
+    </div>
+ <!-- sidebar section -->
+ <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+ <div class="xyz">
+  <div class="menu-logo">
+  <img style="background-color: white;"  src="/Images/menu1.png" alt="">
+  <img src="/Images/menu2.png" alt="">
+  <img src="/Images/menu3.png" alt="">
+  <img src="/Images/menu4.png" alt="">
+  <img src="/Images/menu5.png" alt="">
+  <img src="/Images/menu6.png" alt="">
+  <img src="/Images/menu7.png" alt="">
+  <img src="/Images/menu8.png" alt="">
+  <img src="/Images/menu9.png" alt="">
+  <img src="/Images/menu10.png" alt="">
+  <img src="/Images/menu11.png" alt="">
+  <img src="/Images/menu12.png" alt="">
+  <img src="/Images/menu13.png" alt="">
+  <img src="/Images/menu14.png" alt="">
+ </div>
+ </div>
+<div class="sidebar">
+    <div class="menu-item">Main</div>
+    <ul class="menu-list">
+        <a href="/Resource/Dashboard/index.html"><li><i class="fas fa-chart-bar"></i> Dashboard</li></a>
+        <li><i class="fas fa-chart-line"></i> Analytics</li>
+        <a style="text-decoration: none;" href="/Resource/App-download-status/App-download.html"><li><i class="fas fa-download"></i> App Download Status</li></a>
+        <li><i class="fas fa-user"></i> User Status <i class="ri-arrow-drop-down-line"></i>  <li class="user-status">
+            <!-- <i class="fas fa-user"></i> User Status -->
+            <ul class="submenu">
+                <li>Verified Users</li>
+                <li>Under Verification</li>
+                <li>Not Verified Users</li>
+                <li>Rejected Users</li>
+            </ul>
+        </li>
+          </li>
+    </ul>
+    <div class="menu-item">Organization</div>
+    <ul class="menu-list">
+        <li><i class="fas fa-building"></i> Total Companies</li>
+        <li><i class="fas fa-users"></i> Total HR Recruiters</li>
+    </ul>
+    <div class="menu-item">Hiremi 360 Program</div>
+    <ul class="menu-list">
+        <li><i class="fas fa-graduation-cap"></i> Training + Internship</li>
+        <li><i class="fas fa-lightbulb"></i> Unimentor Program</li>
+        <li><i class="fas fa-rocket"></i> Corporate Launchpad</li>
+        <li><i class="fas fa-file"></i> Mock Tests</li>
+        <li><i class="fas fa-laptop-code"></i> Live Project Hub</li>
+    </ul>
+    <div class="menu-item">More</div>
+    <ul class="menu-list">
+        <li><i class="fas fa-laptop-code"></i> Project Report</li>
+        <li><i class="fas fa-file"></i> Admin Setting</li>
+    </ul>
+</div>
+
+<div class="content">
+    <div class="container">
+        <h1> Not Verified Users <span class="count" style=" color:  rgba(0, 61, 209, 1);">(100)</span></h1>
+        <h2 style="font-weight: 100;">Total Representation</h2>
+        <div class="search-container">
+          <input type="text" id="search" placeholder="Search">
+          <button id="searchBtn">Search</button>
+        </div>
+        <div class="filters">
+          <button class="filter-btn active"> <i class="ri-arrow-up-down-line"></i> Default</button>
+          <button class="filter-btn"> <i class="ri-arrow-up-down-line"></i> Filter by Date</button>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>UID No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No.</th>
+                <th>Whatsapp No.</th>
+                <th>Gender</th>
+                <th>Degree</th>
+                <th>Birthplace State</th>
+                <th>College Name</th>
+                <th>College State</th>
+                    <th>Passing Year 
+                    <i class="ri-arrow-down-s-line" id="passingYearIcon"></i>
+                    <div id="passingYearDropdown" class="dropdown-content">
+                      <a href="#">2015</a>
+                      <a href="#">2016</a>
+                      <a href="#">2017</a>
+                      <a href="#">2018</a>
+                      <a href="#">2019</a>
+                      <a href="#">2020</a>
+                      <a href="#">2021</a>
+                      <a href="#">2022</a>
+                      <a href="#">2023</a>
+                      <a href="#">2024</a>
+                    </div>
+                  </th>
+                  
+                </th>
+                <th>Account Creation Date and Time</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="userTable">
+     
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+            <button class="page-btn" id="prev">&lt;</button>
+            <button class="page-btn">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn" id="next">&gt;</button>
+            <input type="number" id="page-input" min="1" placeholder="Page No.">
+            <button class="go-btn">Go</button>
+          </div>
+      </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

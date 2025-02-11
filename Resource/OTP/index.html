@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiremi - OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <h1>Hiremi</h1>
+            <h2>Super Admin Login</h2>
+            <p>By logging in, you gain access to the entire Hiremi Application,<br> allowing you to view and make necessary changes.</p>
+            <a href="#" class="learn-more">Learn More ></a>
+            <div class="loading-bar">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center p-4 p-lg-5 position-relative">
+        
+
+<!-- Right panel -->
+        <div class="right-panel">
+            <h1>OTP Sent!</h1>
+            
+           <h5>An OPT sent to your email address s***********@gmail.com  </h5>
+            
+           <h3>Enter OTP</h3>
+            <div class="otp-input">
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-box"
+                onkeyup="moveNext(event, 0)"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-box"
+                onkeyup="moveNext(event, 1)"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-box"
+                onkeyup="moveNext(event, 2)"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-box"
+                onkeyup="moveNext(event, 3)"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-box"
+                onkeyup="moveNext(event, 4)"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-box"
+                onkeyup="moveNext(event, 5)"
+              />
+            </div>
+            <p>
+              Didn’t receive OTP?
+              <a href="#" onclick="resendOTP()"> Resend OTP</a>
+            </p>
+            <a href="/Resource/Dashboard/index.html"><button  onclick="verifyOTP()">Verify Now</button></a>
+        </div>
+
+          <span class="chatbox">
+            <img src="./assets/CHAT.png" alt="Chat icon" /></div></span>
+        </div>
+      </div>
+    
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

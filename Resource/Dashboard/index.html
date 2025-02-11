@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="/Images/Hiremi logo.png" alt="">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="nav-icons">
+            <i id="notification" class="ri-notification-3-line"></i>
+            <i id="user" class="ri-user-3-line"></i>
+        </div>
+        <div class="nav-content">
+            <h6 style="color: blue; letter-spacing: 0.5px; margin-left: -22%;">Super Admin</h6>
+            <p style="font-size: 15px; margin-left: -22%;">Username</p>
+        </div>
+    </div>
+
+    <!-- sidebar section -->
+    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+     <div class="xyz">
+      <div class="menu-logo">
+        <!-- <img src="/Images/menu dashboard.png" alt=""> -->
+      <img style="background-color: white;" src="/Images/menu1.png" alt="">
+      <img src="/Images/menu2.png" alt="">
+      <img src="/Images/menu3.png" alt="">
+      <img src="/Images/menu4.png" alt="">
+      <img src="/Images/menu5.png" alt="">
+      <img src="/Images/menu6.png" alt="">
+      <img src="/Images/menu7.png" alt="">
+      <img src="/Images/menu8.png" alt="">
+      <img src="/Images/menu9.png" alt="">
+      <img src="/Images/menu10.png" alt="">
+      <img src="/Images/menu11.png" alt="">
+      <img src="/Images/menu12.png" alt="">
+      <img src="/Images/menu13.png" alt="">
+      <img src="/Images/menu14.png" alt="">
+     </div>
+     </div>
+    <div class="sidebar">
+        <div class="menu-item">Main</div>
+        <ul class="menu-list">
+            <li><i class="fas fa-chart-bar"></i> Dashboard</li>
+            <li><i class="fas fa-chart-line"></i> Analytics</li>
+            <a style="text-decoration: none;" href="/Resource/App-download-status/App-download.html"><li><i class="fas fa-download"></i> App Download Status</li></a>
+            <li><i class="fas fa-user"></i> User Status <i class="ri-arrow-drop-down-line"></i>  <li class="user-status">
+                <!-- <i class="fas fa-user"></i> User Status -->
+                <ul class="submenu">
+                    <li>Verified Users</li>
+                    <li>Under Verification</li>
+                    <li>Not Verified Users</li>
+                    <li>Rejected Users</li>
+                </ul>
+            </li>
+              </li>
+        </ul>
+        <div class="menu-item">Organization</div>
+        <ul class="menu-list">
+            <li><i class="fas fa-building"></i> Total Companies</li>
+            <li><i class="fas fa-users"></i> Total HR Recruiters</li>
+        </ul>
+        <div class="menu-item">Hiremi 360 Program</div>
+        <ul class="menu-list">
+            <li><i class="fas fa-graduation-cap"></i> Training + Internship</li>
+            <li><i class="fas fa-lightbulb"></i> Unimentor Program</li>
+            <li><i class="fas fa-rocket"></i> Corporate Launchpad</li>
+            <li><i class="fas fa-file"></i> Mock Tests</li>
+            <li><i class="fas fa-laptop-code"></i> Live Project Hub</li>
+        </ul>
+        <div class="menu-item">More</div>
+        <ul class="menu-list">
+            <li><i class="fas fa-laptop-code"></i> Project Report</li>
+            <li><i class="fas fa-file"></i> Admin Setting</li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="main-container">
+            <div class="left">
+                <div class="left-top">
+                    <p>Application Dashboard</p>
+                    <div class="card">
+                        <div class="cards1">
+                            <img src="/Images/total account.png" alt="">
+                            <p>Total Accounts Created</p>
+                            <h1 style="margin-top: 7%;">42</h1>
+                            <hr id="horizontal-line">
+                        </div>
+                        <a href="/Resource/Verified-User/index.html">
+                            <div class="cards2">
+                                <img style="margin-left: -300%;" src="/Images//verificatio user.png" alt="">
+                                <p  style="width: 600%; margin-left: -280%;" >Verified Users</p>
+                                <h1 style="margin-left: -270%; margin-top: 110%;">20</h1>
+                                <hr id="horizontall-line">
+                            </div>
+                        </a>
+                        <a href="/Resource/Under-Verification/Under-verification.html">
+                            <div class="cards3">
+                                <img style="margin-left: -80%;" src="/Images/under verification.png" alt="">
+                                <p style="width: 500%; margin-left: -80%;">Under Verification</p>
+                                <h1 style="margin-left: -60%; margin-top: 80%;">12</h1>
+                                <hr id="horizontalll-line">
+                            </div>
+                        </a>
+                        <a href="/Resource/Not-Verify-users/index.html">
+                            <div class="cards4">
+                                <img style="margin-left: -70%;" src="/Images/not verify.png" alt="">
+                                <p style="width: 500%; margin-left: -50%;">Not Verified Users</p>
+                                <h1 style="margin-left: -40%; margin-top: 80%;">8</h1>
+                                <hr id="horizontallll-line">
+                            </div>
+                        </a>
+                        <a href="/Resource/Rejected-User/index.html">
+                            <div class="cards5" style="margin-left: 10%;">
+                                <img src="/Images/rejected.png" alt="">
+                                <p style="width: 400%;">Rejected In Verification</p>
+                                <h1>2</h1>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="left-center">
+                    <p>Hiremi 360 Program</p>
+                    <div class="cards">
+                        <div class="card-1">
+                            <img src="/Images//Total Employees in hiremi 360 section.png" alt="">
+                            <h1>1259</h1>
+                            <h6>Unimentor + internship</h6>
+                        </div>
+                        <div class="card-2">
+                            <img src="/Images//Total Employees in hiremi 360 section.png" alt="">
+                            <h1>1259</h1>
+                            <h6>Unimentor program</h6>
+                        </div>
+                        <div class="card-3">
+                            <img src="/Images//Total Employees in hiremi 360 section.png" alt="">
+                            <h1>1259</h1>
+                            <h6>Corporate Launchpad</h6>
+                        </div>
+                        <div class="card-4">
+                            <img src="/Images//Total Employees in hiremi 360 section.png" alt="">
+                            <h1>1259</h1>
+                            <h6>Moc Tests</h6>
+                        </div>
+                        <div class="card-5">
+                            <img src="/Images//Total Employees in hiremi 360 section.png" alt="">
+                            <h1>1259</h1>
+                            <h6>Live Project Hub</h6>
+                        </div>
+                        <div class="card-6">
+                            <img src="/Images//Total Employees in hiremi 360 section.png" alt="">
+                            <h1>1259</h1>
+                            <h6>Launching Soon</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-down">
+                    <p>HR's Dashboard</p>
+                    <div class="cards">
+                        <div class="card-1">
+                            <h6>Verified</h6>
+                            <h6 id="Total">Total</h6>
+                            <h1>3636</h1>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                        <div class="card-2">
+                            <h6>Not Verifed</h6>
+                            <h6 id="Total">Total</h6>
+                            <h1>3636</h1>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                        <div class="card-3">
+                            <h6>Registered</h6>
+                            <h6 id="Total">Total</h6>
+                            <h1>3636</h1>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                        <div class="card-4">
+                            <h6>Post Apporval</h6>
+                            <h6 id="Total">Total</h6>
+                            <h1>3636</h1>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                        <div class="card-5">
+                            <h6>Demo Section</h6>
+                            <h6 id="Total">Total</h6>
+                            <h1>3636</h1>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                        <div class="card-6">
+                            <h6>Demo Section</h6>
+                            <h6 id="Total">Total</h6>
+                            <h1>3636</h1>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <p>User's Dashboard</p>
+                    <div class="left">
+                        <div class="l-female-users">
+                            <h1 id="bottom-cards-no">10</h1>
+                            <p id="bottom-genders">Female Users</p>
+                            <div class="top">
+                                <div class="verified">
+                                    <p>999 <br> Verified <i class="ri-arrow-right-line"></i></p>
+                                </div>
+                            </div>
+                            <div class="down">
+                                <div class="verified">
+                                    <p>999 <br> Not Verified <i class="ri-arrow-right-line"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r-male-users">
+                            <h1 id="bottom-cards-no">20</h1>
+                            <p id="bottom-genders">Male Users</p>
+                            <div class="top">
+                                <div class="verified">
+                                    <p>999 <br> Verified <i class="ri-arrow-right-line"></i></p>
+                                </div>
+                            </div>
+                            <div class="down">
+                                <div class="verified">
+                                    <p>999 <br>Not Verified <i class="ri-arrow-right-line"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="right-bottom">
+                            <div class="bottom-card">Interested Domain <span><i class="ri-arrow-right-line"></i></span></div>
+                            <div class="bottom-card">Degree <span><i class="ri-arrow-right-line"></i></span></div>
+                            <div class="bottom-card">College State <span><i class="ri-arrow-right-line"></i></span></div>
+                            <div class="bottom-card">Branch <span><i class="ri-arrow-right-line"></i></span></div>
+                            <div class="bottom-card">Passing Year <span><i class="ri-arrow-right-line"></i></span></div>
+                            <div class="bottom-card">Birth Place <span><i class="ri-arrow-right-line"></i></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!------------------------------------------------------------------------------------>
+            <div class="right">
+                <div class="right-top">
+                    <p id="Current-Opportunities">Current Opportunities</p>
+                    <div class="cards">
+                        <div class="top-cards">
+                            <img src="/Images/internships.png" alt="">
+                            <p id="internships">internships</p>
+                            <h1 id="numbers">1000</h1>
+                        </div>
+                        <div class="center-cards">
+                            <img src="/Images/job.png" alt="">
+                            <p id="Freshers">Freshers Job</p>
+                            <h1 id="numbers">2000</h1>
+                        </div>
+                        <div class="down-cards">
+                            <img src="/Images/experience.png" alt="">
+                            <p id="Experienced">Experienced Job</p>
+                            <h1 id="numbers">1000</h1>
+                        </div>
+                     </div>
+                </div>
+<!------------------------------------------------------------------------------------>
+                <div class="right-center">
+                    <p id="Current-Opportunities">Current Seekers</p>
+                    <div class="cards">
+                        <div class="top-cards">
+                            <img src="/Images/internships.png" alt="">
+                            <p id="internships">internships</p>
+                            <h1 id="numbers">1000</h1>
+                        </div>
+                        <div class="center-cards">
+                            <img src="/Images/job.png" alt="">
+                            <p id="Freshers">Freshers Job</p>
+                            <h1 id="numbers">2000</h1>
+                        </div>
+                        <div class="down-cards">
+                            <img src="/Images/experience.png" alt="">
+                            <p id="Experienced">Experienced Job</p>
+                            <h1 id="numbers">1000</h1>
+                        </div>
+                     </div>
+                </div>
+<!------------------------------------------------------------------------------------>
+                <div class="right-down">
+                    <p id="resolved">resolved queries</p>
+                    <h1>50<span style="color: rgba(0, 0, 0, 0.308);">/100</span> </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
