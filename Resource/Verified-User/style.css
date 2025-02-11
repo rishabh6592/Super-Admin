@@ -140,9 +140,9 @@ cursor: pointer;
     /* main contebnt */
  .container{
      width: 98%;
-     margin-top: 5%;
+     margin: 6% 5%;
+     background-color: #f3f1f1;
      border-radius: 10px;
-     margin-left: 3%;
      transition: margin-left 0.3s ease-in-out;
  }
   h1 {
